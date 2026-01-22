@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { User, Mail, Lock, Eye, EyeOff, Moon, Sun, Check, X } from 'lucide-react';
-import vizlyLogo from 'figma:asset/96bf4512efe4ad439d153f2c27b017ec43a256da.png';
+import vizlyLogo from '../../assets/vizlyLogo.png';
 
 interface SignUpProps {
   onSignUp: () => void;
@@ -55,7 +55,7 @@ export default function SignUp({ onSignUp, onNavigateToLogin, darkMode, onToggle
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <button
         onClick={() => onToggleDarkMode(!darkMode)}
         className="fixed top-6 right-6 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all z-10"
@@ -149,7 +149,7 @@ export default function SignUp({ onSignUp, onNavigateToLogin, darkMode, onToggle
               </label>
             </div>
 
-            <button type="submit" className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200">
+            <button type="submit" className="w-full py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200">
               Create Account
             </button>
           </form>

@@ -37,7 +37,7 @@ import DataPreviewModal from "./DataPreviewModal";
 import EditItemModal from "./EditItemModal";
 import PublishWorkspaceModal from "./PublishWorkspaceModal";
 import NotificationPanel from "./NotificationPanel";
-import vizlyLogo from 'figma:asset/96bf4512efe4ad439d153f2c27b017ec43a256da.png';
+import vizlyLogo from '../assets/vizlyLogo.png';
 
 interface WorkspaceScreenProps {
   onNavigate: (
@@ -452,7 +452,7 @@ export default function WorkspaceScreen({
               <div className="relative">
                 <button 
                   onClick={() => setShowProfileMenu(!showProfileMenu)}
-                  className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:scale-105 transition-all"
+                  className="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:scale-105 transition-all"
                 >
                   <User className="w-5 h-5" />
                 </button>
@@ -504,7 +504,7 @@ export default function WorkspaceScreen({
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setShowPublishModal(true)}
-                className="flex items-center space-x-2 px-4 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-sm hover:shadow-md"
+                className="flex items-center space-x-2 px-4 py-2.5 bg-linear-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-sm hover:shadow-md"
               >
                 <Globe className="w-4 h-4" />
                 <span>Publish</span>
@@ -537,7 +537,7 @@ export default function WorkspaceScreen({
       {showCreateMenu && (
         <div 
           ref={createMenuRef}
-          className="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 py-2 z-[9999]"
+          className="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 py-2 z-9999"
         >
           <button
             onClick={() => {
@@ -634,7 +634,7 @@ export default function WorkspaceScreen({
             <aside className="absolute left-0 top-0 bottom-0 w-64 bg-white dark:bg-gray-800 shadow-xl">
               <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-linear-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                     <Grid3x3 className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-gray-900 dark:text-white">
@@ -694,7 +694,7 @@ export default function WorkspaceScreen({
 
               {/* Quick Stats Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-5 text-white">
+                <div className="bg-linear-to-br from-purple-500 to-purple-600 rounded-xl p-5 text-white">
                   <div className="flex items-center justify-between mb-3">
                     <BarChart3 className="w-8 h-8 opacity-80" />
                     <TrendingUp className="w-5 h-5 opacity-60" />
@@ -703,7 +703,7 @@ export default function WorkspaceScreen({
                   <div className="text-sm opacity-90">Active Dashboards</div>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-5 text-white">
+                <div className="bg-linear-to-br from-blue-500 to-blue-600 rounded-xl p-5 text-white">
                   <div className="flex items-center justify-between mb-3">
                     <FileText className="w-8 h-8 opacity-80" />
                     <TrendingUp className="w-5 h-5 opacity-60" />
@@ -712,7 +712,7 @@ export default function WorkspaceScreen({
                   <div className="text-sm opacity-90">Total Reports</div>
                 </div>
 
-                <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl p-5 text-white">
+                <div className="bg-linear-to-br from-emerald-500 to-emerald-600 rounded-xl p-5 text-white">
                   <div className="flex items-center justify-between mb-3">
                     <Database className="w-8 h-8 opacity-80" />
                     <TrendingUp className="w-5 h-5 opacity-60" />

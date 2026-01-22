@@ -16,7 +16,7 @@ import {
   Star,
   Download,
 } from "lucide-react";
-import vizlyLogo from 'figma:asset/96bf4512efe4ad439d153f2c27b017ec43a256da.png';
+import vizlyLogo from '../assets/vizlyLogo.png';
 import WorkspaceDetailView from "./WorkspaceDetailView";
 import ProfileSettings from "./ProfileSettings";
 import NotificationPanel from "./NotificationPanel";
@@ -302,7 +302,7 @@ export default function CommunityHub({
               <div className="relative">
                 <button 
                   onClick={() => setShowProfileMenu(!showProfileMenu)}
-                  className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:scale-105 transition-all"
+                  className="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:scale-105 transition-all"
                 >
                   <User className="w-5 h-5" />
                 </button>
@@ -451,7 +451,7 @@ export default function CommunityHub({
 
                 {/* Creator */}
                 <div className="flex items-center gap-2 mb-5">
-                  <div className="w-7 h-7 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xs">
+                  <div className="w-7 h-7 bg-linear-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xs">
                     {workspace.creator.avatar}
                   </div>
                   <span className="text-sm text-gray-600 dark:text-gray-400">
@@ -463,7 +463,7 @@ export default function CommunityHub({
                     </div>
                   )}
                   {workspace.creator.isPro && (
-                    <span className="text-xs px-1.5 py-0.5 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full">
+                    <span className="text-xs px-1.5 py-0.5 bg-linear-to-r from-purple-500 to-blue-500 text-white rounded-full">
                       PRO
                     </span>
                   )}
@@ -504,7 +504,7 @@ export default function CommunityHub({
           {/* Create Your Own Card - Match Style */}
           <div
             onClick={() => onNavigate('home')}
-            className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-800 rounded-2xl border-2 border-dashed border-gray-300 dark:border-gray-600 p-6 hover:border-blue-500 dark:hover:border-blue-400 hover:from-blue-50 hover:to-blue-100 dark:hover:from-blue-900/20 dark:hover:to-blue-900/10 transition-all cursor-pointer flex items-center justify-center min-h-[280px] group hover:-translate-y-1 duration-300"
+            className="bg-linear-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-800 rounded-2xl border-2 border-dashed border-gray-300 dark:border-gray-600 p-6 hover:border-blue-500 dark:hover:border-blue-400 hover:from-blue-50 hover:to-blue-100 dark:hover:from-blue-900/20 dark:hover:to-blue-900/10 transition-all cursor-pointer flex items-center justify-center min-h-[280px] group hover:-translate-y-1 duration-300"
           >
             <div className="text-center">
               <div className="w-16 h-16 bg-white dark:bg-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all">
@@ -533,9 +533,12 @@ export default function CommunityHub({
       {/* Profile Settings Modal */}
       {showSettings && (
         <ProfileSettings 
-          onClose={() => setShowSettings(false)} 
-          darkMode={darkMode}
-        />
+          onClose={() => setShowSettings(false)}
+          darkMode={darkMode} onLogout={function (): void {
+            throw new Error("Function not implemented.");
+          } } onToggleDarkMode={function (value: boolean): void {
+            throw new Error("Function not implemented.");
+          } }        />
       )}
     </div>
   );

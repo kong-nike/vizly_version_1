@@ -5,7 +5,7 @@ import ImportDataModal from './ImportDataModal';
 import EditItemModal from './EditItemModal';
 import PublishWorkspaceModal from './PublishWorkspaceModal';
 import NotificationPanel from './NotificationPanel';
-import vizlyLogo from 'figma:asset/96bf4512efe4ad439d153f2c27b017ec43a256da.png';
+import vizlyLogo from '../assets/vizlyLogo.png';
 
 interface WorkspaceHomeProps {
   onNavigate: (screen: 'home' | 'workspace' | 'builder' | 'community') => void;
@@ -105,7 +105,7 @@ export default function WorkspaceHome({ onNavigate, onLogout, darkMode, onToggle
               <div className="relative">
                 <button 
                   onClick={() => setShowProfileMenu(!showProfileMenu)}
-                  className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:scale-105 transition-all"
+                  className="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:scale-105 transition-all"
                 >
                   <User className="w-5 h-5" />
                 </button>
@@ -176,7 +176,7 @@ export default function WorkspaceHome({ onNavigate, onLogout, darkMode, onToggle
 
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-5 text-white">
+            <div className="bg-linear-to-br from-blue-500 to-blue-600 rounded-xl p-5 text-white">
               <div className="flex items-center justify-between mb-2">
                 <Folder className="w-8 h-8 opacity-80" />
                 <TrendingUp className="w-5 h-5 opacity-60" />
@@ -185,7 +185,7 @@ export default function WorkspaceHome({ onNavigate, onLogout, darkMode, onToggle
               <div className="text-sm opacity-90">Total Workspaces</div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-5 text-white">
+            <div className="bg-linear-to-br from-purple-500 to-purple-600 rounded-xl p-5 text-white">
               <div className="flex items-center justify-between mb-2">
                 <BarChart3 className="w-8 h-8 opacity-80" />
                 <TrendingUp className="w-5 h-5 opacity-60" />
@@ -194,7 +194,7 @@ export default function WorkspaceHome({ onNavigate, onLogout, darkMode, onToggle
               <div className="text-sm opacity-90">Total Reports</div>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl p-5 text-white">
+            <div className="bg-linear-to-br from-emerald-500 to-emerald-600 rounded-xl p-5 text-white">
               <div className="flex items-center justify-between mb-2">
                 <Clock className="w-8 h-8 opacity-80" />
               </div>
@@ -202,7 +202,7 @@ export default function WorkspaceHome({ onNavigate, onLogout, darkMode, onToggle
               <div className="text-sm opacity-90">Last Activity</div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-5 text-white">
+            <div className="bg-linear-to-br from-orange-500 to-orange-600 rounded-xl p-5 text-white">
               <div className="flex items-center justify-between mb-2">
                 <Users className="w-8 h-8 opacity-80" />
               </div>
@@ -332,7 +332,7 @@ export default function WorkspaceHome({ onNavigate, onLogout, darkMode, onToggle
           {/* Create New Workspace Card */}
           <div 
             onClick={() => setShowImportModal(true)}
-            className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-800 rounded-2xl border-2 border-dashed border-gray-300 dark:border-gray-600 p-6 hover:border-blue-500 dark:hover:border-blue-400 hover:from-blue-50 hover:to-blue-100 dark:hover:from-blue-900/20 dark:hover:to-blue-900/10 transition-all cursor-pointer flex items-center justify-center min-h-[280px] group"
+            className="bg-linear-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-800 rounded-2xl border-2 border-dashed border-gray-300 dark:border-gray-600 p-6 hover:border-blue-500 dark:hover:border-blue-400 hover:from-blue-50 hover:to-blue-100 dark:hover:from-blue-900/20 dark:hover:to-blue-900/10 transition-all cursor-pointer flex items-center justify-center min-h-[280px] group"
           >
             <div className="text-center">
               <div className="w-16 h-16 bg-white dark:bg-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all">

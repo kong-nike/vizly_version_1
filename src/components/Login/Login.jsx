@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, Moon, Sun } from 'lucide-react';
-import vizlyLogo from 'figma:asset/96bf4512efe4ad439d153f2c27b017ec43a256da.png';
+import vizlyLogo from '../../assets/vizlyLogo.png';
 import styles from './Login.module.css';
 
 /**
